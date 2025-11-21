@@ -1,1 +1,2 @@
-{"name":"emman","email":"emman@mail.com","password":"$2b$10$FIutNGAh9Zq5tYU7Rha9R.b49VO9hT2wVxFh2EGM2KRyTQfnzgdB.","_id":"oLigCSCVPWcKDGR4"}
+{"name":"emman","email":"emman@mail.com","password":"$2b$10$cFhgzEoF1WlAt07v6oGSxOee9X9K9UsofnROVaxIar3ciWox4r7du","role":"admin","_id":"hvFmAbhXqArnYlQp"}
+{"name":"niji","email":"niji@mail.com","password":"$2b$10$0k/pWtYjgwQegXDBs7ADcuF9CLvSR1g9I0b3uJe3vcKOTRx9lx8sq","role":"member","_id":"nMSTujbBJcvno8WY"}

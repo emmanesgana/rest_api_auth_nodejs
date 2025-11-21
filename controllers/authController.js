@@ -6,7 +6,7 @@ const config = require("../config/config");
 
 const register = async (req, res) => {
     try {
-        const { name, email, password } = req.body;
+        const { name, email, password, role } = req.body;
 
         if (!name || !email || !password) {
             return res.status(422).json({ message: "Please fill in all fields (name, email and password)" });
@@ -21,7 +21,8 @@ const register = async (req, res) => {
         const newUser = await users.insert({
             name,
             email,
-            password: hashedPassword
+            password: hashedPassword,
+            role: role ?? "member"
         });
 
         return res.status(201).json({
@@ -83,8 +84,19 @@ const current = async (req, res) => {
     }
 }
 
+const admin = async (req, res) => {
+    return res.status(200).json({ message: "Only admins can access this route" });
+}
+
+const adminModerator = async (req, res) => {
+    return res.status(200).json({ message: "Only admins and mods can access this route" });
+}
+
+
 module.exports = {
     register,
     login,
-    current
+    current,
+    admin,
+    adminModerator
 }
